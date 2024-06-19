@@ -1,0 +1,39 @@
+def count_words(paragraph):
+    # Split the paragraph into words based on whitespace
+    words = paragraph.split()
+    # Return the number of words
+    return len(words)
+
+def main():
+    # Prompt the user to enter a paragraph
+    print("Enter a paragraph (press Enter twice to finish):")
+    paragraph_lines = []
+    
+    # Keep reading lines until an empty line is encountered
+    while True:
+        line = input()
+        if line:
+            paragraph_lines.append(line)
+        else:
+            break
+    
+    # Join all lines to form the paragraph
+    paragraph = " ".join(paragraph_lines)
+    
+    # Count the number of words in the paragraph
+    num_words = count_words(paragraph)
+    
+    # Print the result
+    print(f"Number of words in the paragraph: {num_words}")
+
+if __name__ == "__main__":
+    main()
+
+output of program
+Enter a paragraph (press Enter twice to finish):
+This is a sample paragraph.
+It has multiple lines.
+Each line will be counted as a separate input.
+Press Enter twice to finish.
+
+Number of words in the paragraph: 16
